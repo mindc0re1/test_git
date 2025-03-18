@@ -26,7 +26,7 @@ public class MainPageTest {
     public void setUp() {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://www.jetbrains.com/");
+        open("hnttps://www.jetbrains.com/");
     }
 
     @Test
