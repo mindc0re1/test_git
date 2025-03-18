@@ -33,7 +33,7 @@ public class MainPageTest {
     public void search() {
         mainPage.searchButton.click();
 
-        $("[data-test='search-input']").sendKeys("Selenium");
+        $("[data-test='search-input']").sendKeys("Selenium2");
         $("button[data-test='full-search-button']").click();
 
         $("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"));
