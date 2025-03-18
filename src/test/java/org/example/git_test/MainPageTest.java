@@ -21,7 +21,7 @@ public class MainPageTest {
         Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
-
+//
     @BeforeEach
     public void setUp() {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
