@@ -21,19 +21,19 @@ public class MainPageTest {
         Configuration.browserSize = "1280x909";
         SelenideLogger.addListener(uj"allure", new AllureSelenide());
     }
-
+//
     @BeforeEach
     public void setUp() {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://www.jetbrains.com/");
+        open("hnttps://www.jetbrains.com/");
     }
 
     @Test
     public void search() {
         mainPage.searchButton.click();
 
-        $("[data-test='search-input']").sendKeys("Selenium");
+        $("[data-test='search-input']").sendKeys("Selenium2");
         $("button[data-test='full-search-button']").click();
 
         $("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"));
@@ -43,7 +43,7 @@ public class MainPageTest {
     public void toolsMenu() {
         mainPage.toolsMenu.click();
 
-        $("div[data-test='main-submenu']").shouldBe(visible);
+        $("div[data-test='main-submenu2']").shouldBe(visible);
     }
 
     @Test
